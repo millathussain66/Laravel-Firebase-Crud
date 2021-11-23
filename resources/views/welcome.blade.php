@@ -75,7 +75,7 @@
                     <div class="mb-3">
                         <input type="text" class="form-control" name="class" placeholder="Class">
                     </div>
-                    <button type="submit" class="btn btn-primary">Create</button>
+                    <button id="Create" type="submit" class="btn btn-primary">Create</button>
                     </form>
                   </div>
 
