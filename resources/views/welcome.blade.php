@@ -49,7 +49,6 @@
 
         </div>
         <div class="col-lg-4">
-
             <div class="card">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -57,7 +56,7 @@
 
                   </div>
                   <div class="modal-body">
-                    <form action="" method="post">
+                    <form action="" method="post" id="createStudentFrom">
                     <div class="mb-3">
                         <input type="text" class="form-control" name="fristname" placeholder="Frist Name">
                     </div>
@@ -81,14 +80,71 @@
 
                 </div>
               </div>
-
-
-
         </div>
     </div>
 </div>
-
-
-
-
 @endsection
+
+@push('script')
+
+<script>
+
+   $(document).ready(function(){
+
+    //1 Firebase Condition
+        const firebaseConfig = {
+
+        apiKey: "{{ config('services.firebase.apiKey') }}",
+        authDomain: "{{ config('services.firebase.authDomain') }}",
+        projectId: "{{ config('services.firebase.projectId') }}",
+        storageBucket: "{{ config('services.firebase.storageBucket') }}",
+        messagingSenderId: "{{ config('services.firebase.messagingSenderId') }}",
+        appId: "{{ config('services.firebase.appId') }}",
+        measurementId: "{{ config('services.firebase.measurementId') }}"
+
+        };
+          // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+
+    //2 CreateStudent Funciton
+
+
+
+    //3 Edite Student Function
+
+
+
+
+    //4 Update Student Function
+
+
+    //5 Delete Student Function
+
+
+    // Session Alert
+
+
+
+
+    // Clear input Data From Input Fild
+
+
+
+
+
+
+
+
+
+
+
+
+   });
+
+
+
+</script>
+
+@endpush
